@@ -10,6 +10,7 @@
         ],
         "sourceMap": true,
         "allowJs": true,
+        // TypeScript编译JSX有两种模式：preserve和react
         "jsx": "react",
         "moduleResolution": "node",
         "rootDir": "src",
