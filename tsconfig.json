@@ -3,19 +3,25 @@
         "baseUrl": ".",
         "outDir": "build/dist",
         "module": "esnext",
+        // Vue 的浏览器支持，也是这个
         "target": "es5",
         "lib": [
             "es6",
             "dom"
         ],
         "sourceMap": true,
+        // 允许编译javascript文件。
+        // 如果一个glob模式里的某部分只包含*或.*，那么仅有支持的文件扩展名类型被包含在内（比如默认.ts，.tsx，和.d.ts， 如果allowJs设置为true还包含.js和.jsx）。
         "allowJs": true,
+        // 允许从没有设置默认导出的模块中默认导入。这并不影响代码的显示，仅为了类型检查。
+        "allowSyntheticDefaultImports": "",
         // TypeScript编译JSX有两种模式：preserve和react
         "jsx": "react",
         "moduleResolution": "node",
         "rootDir": "src",
         "forceConsistentCasingInFileNames": true,
         "noImplicitReturns": true,
+        // 需要引入 strict: true (或者至少 noImplicitThis: true，这是 strict 模式的一部分) 以利用组件方法中 this 的类型检查，否则它会始终被看作 any 类型
         "noImplicitThis": true,
         "noImplicitAny": true,
         "strictNullChecks": true,
