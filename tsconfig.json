@@ -1,22 +1,69 @@
 {
     "compilerOptions": {
-        "baseUrl": ".",
-        "outDir": "build/dist",
-        "module": "esnext",
-        // Vue 的浏览器支持，也是这个
-        "target": "es5",
-        "lib": [
-            "es6",
-            "dom"
-        ],
-        "sourceMap": true,
         // 允许编译javascript文件。
         // 如果一个glob模式里的某部分只包含*或.*，那么仅有支持的文件扩展名类型被包含在内（比如默认.ts，.tsx，和.d.ts， 如果allowJs设置为true还包含.js和.jsx）。
         "allowJs": true,
         // 允许从没有设置默认导出的模块中默认导入。这并不影响代码的显示，仅为了类型检查。
         "allowSyntheticDefaultImports": "",
-        // TypeScript编译JSX有两种模式：preserve和react
+        // 允许执行不到的代码错误
+        "allowUnreachableCode": false,
+        // 允许未使用的标签错误
+        "allowUnusedLabels": false,
+        // 输入文件的字符集
+        "charset": "utf8",
+        // 生成相应的'.d.ts'文件
+        "declaration": false,
+        // 生成声明文件的输出路径
+        "declarationDir": null,
+        // 显示诊断信息
+        "diagnostics": false,
+        // 禁用JavaScript工程体积大小的限制
+        "disableSizeLimit": false,
+        // 在输出文件的开头加入BOM头（UTF-8 Byte Order Mark）
+        "emitBOM": false,
+        // 给源码里的装饰器声明加上设计类型元数据
+        "emitDecoratorMetadata": false,
+        // 实验性启用ES7装饰器支持
+        "experimentalDecorators": false,
+        //
+        "forceConsistentCasingInFileNames": false,
+        // 生成单个sourcemap文件，而不是每个生成不同的sourcemap文件
+        "inlineSourceMap": false,
+        // 生成相应的'.map'文件
+        "sourceMap": true,
+        // 将代码与sourcemaps生成到一个文件中，要求同时设置了 inlineSourceMap 或 sourceMap 属性。
+        "inlineSources": false,
+        // 无条件地给没有解析的文件生成imports
+        "isolatedModules": false,
+        // TypeScript编译JSX有两种模式：preserve和react。
+        // 这些模式只在代码生成阶段起作用 - 类型检查并不受影响。 在preserve模式下生成代码中会保留JSX以供后续的转换操作使用（比如：Babel）。 另外，输出文件会带有.jsx扩展名。 react模式会生成React.createElement，在使用前不需要再进行转换操作了，输出文件的扩展名为.js。
         "jsx": "react",
+        // 编译过程中打印文件名
+        "listFiles": false,
+        // 显示错误信息时使用的语言，比如：en-us
+        "locale": "en-us",
+        // 为调试器指定指定sourcemap文件的路径，而不是使用生成时的路径。当.map文件是在运行时指定的，并不同于js文件的地址时使用这个标记。指定的路径会嵌入到sourceMap里告诉调试器到哪里去找它们。
+        "mapRoot": "",
+        // Vue 的浏览器支持，也是这个
+        // 指定ECMAScript目标版本'ES3' (默认)，'ES5'，或'ES6'
+        "target": "es5",
+        // 指定生成哪个模块系统代码：'commonjs'、'amd'、'system'、'umd'、'es2015'。只有'amd'和'system'能和 outFile 一起使用。当target是ES5或以下的时候不能使用'es2015'。
+        // target === "ES6" ? "ES6" : "commonjs"
+        "module": "esnext",
+        // 将输出文件合并为一个文件。合并的顺序是根据传入编译器的文件顺序和///<reference``>和import的文件顺序决定的
+        "outFile": "",
+        //
+        //
+        //
+        //
+
+        "baseUrl": ".",
+        "outDir": "build/dist",
+        "lib": [
+            "es6",
+            "dom"
+        ],
+
         "moduleResolution": "node",
         "rootDir": "src",
         "forceConsistentCasingInFileNames": true,
