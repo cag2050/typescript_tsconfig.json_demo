@@ -29,7 +29,7 @@
         "forceConsistentCasingInFileNames": false,
         // 生成单个sourcemap文件，而不是每个生成不同的sourcemap文件
         "inlineSourceMap": false,
-        // 生成相应的'.map'文件
+        // 用于debug,生成相应的.map文件
         "sourceMap": true,
         // 指定TypeScript源文件的路径，以便调试器定位。当TypeScript文件的位置是在运行时指定时使用此标记。路径信息会被加到sourceMap里。
         "sourceRoot": "",
@@ -88,7 +88,9 @@
         // 需要引入 strict: true (或者至少 noImplicitThis: true，这是 strict 模式的一部分) 以利用组件方法中 this 的类型检查，否则它会始终被看作 any 类型
         "noImplicitThis": true,
         "noImplicitAny": true,
-        "noUnusedLocals": true
+        "noUnusedLocals": true,
+        // 要包含的类型声明文件名列表；如果指定了types，只有被列出来的包才会被包含进来
+        "types": []
     },
     "exclude": [
         "node_modules",
